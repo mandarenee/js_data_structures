@@ -39,7 +39,19 @@ class BinarySearchTree
 
 
   size: ->
+    return 0 unless @root?
+    node = @root
+    count = 0
+    traverse = (node) ->
+      current = node
+      count += 1
+      traverse current.left unless current.left == null
+      traverse current.right unless current.right == null
+      count
+    traverse(node)
+
   depth: ->
+
   balance: ->
 
 module.exports = BinarySearchTree

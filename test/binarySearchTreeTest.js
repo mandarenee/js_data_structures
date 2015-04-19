@@ -72,21 +72,21 @@ describe('BinarySearchTree', function() {
   //   expect(tree.balanced()).to.eql(-3);
   // });
 
-  //   it('should return the size of the BST', function() {
-  //   tree = new BinarySearchTree();
-  //   tree.insert(50);
-  //   tree.insert(30);
-  //   tree.insert(60);
-  //   tree.insert(34);
-  //   tree.insert(52);
-  //   tree.insert(62);
-  //   tree.insert(31);
-  //   tree.insert(54);
-  //   expect(tree.size()).to.eql(8);
-  // });
+    it('should return the size of the BST', function() {
+    tree = new BinarySearchTree();
+    tree.insert(50);
+    tree.insert(30);
+    tree.insert(60);
+    tree.insert(34);
+    tree.insert(52);
+    tree.insert(62);
+    tree.insert(31);
+    tree.insert(54);
+    expect(tree.size()).to.equal(8);
+  });
 
-  // it('should return 0 if the tree is empty', function() {
-  //   tree = new BinarySearchTree();
-  //   expect(tree.size()).to.eql(0);
-  // });
+  it('should return 0 if the tree is empty', function() {
+    tree = new BinarySearchTree();
+    expect(tree.size()).to.eql(0);
+  });
 });
