@@ -46,31 +46,58 @@ describe('BinarySearchTree', function() {
     expect(tree.contains(22)).to.equal(false);
   });
 
-  // it('should return the depth of the BST', function() {
-  //   tree = new BinarySearchTree();
-  //   tree.insert(50);
-  //   tree.insert(30);
-  //   tree.insert(60);
-  //   tree.insert(34);
-  //   tree.insert(52);
-  //   tree.insert(62);
-  //   tree.insert(31);
-  //   tree.insert(54);
-  //   expect(tree.depth()).to.eql(4);
-  // });
+  it('should return the depth of the BST', function() {
+    tree = new BinarySearchTree();
+    tree.insert(50);
+    tree.insert(30);
+    tree.insert(60);
+    tree.insert(34);
+    tree.insert(52);
+    tree.insert(62);
+    tree.insert(31);
+    tree.insert(63);
+    expect(tree.depth()).to.equal(4);
+  });
 
-  // it('should return the balance of the BST', function() {
-  //   tree = new BinarySearchTree();
-  //   tree.insert(50);
-  //   tree.insert(30);
-  //   tree.insert(60);
-  //   tree.insert(34);
-  //   tree.insert(52);
-  //   tree.insert(62);
-  //   tree.insert(31);
-  //   tree.insert(54);
-  //   expect(tree.balanced()).to.eql(-3);
-  // });
+  it('should return the depth of the BST', function() {
+    tree = new BinarySearchTree();
+    tree.insert(50);
+    tree.insert(30);
+    tree.insert(60);
+    tree.insert(34);
+    tree.insert(52);
+    tree.insert(62);
+    tree.insert(31);
+    tree.insert(54);
+    tree.insert(56);
+    expect(tree.depth()).to.equal(5);
+  });
+
+  it('should return the depth of the BST', function() {
+    tree = new BinarySearchTree();
+    tree.insert(50);
+    expect(tree.depth()).to.equal(1);
+  });
+
+  it('should return the depth of the BST', function() {
+    tree = new BinarySearchTree();
+    tree.insert(50);
+    tree.insert(30);
+    expect(tree.depth()).to.equal(2);
+  });
+
+  it('should return the balance of the BST', function() {
+    tree = new BinarySearchTree();
+    tree.insert(50);
+    tree.insert(30);
+    tree.insert(60);
+    tree.insert(34);
+    tree.insert(52);
+    tree.insert(62);
+    tree.insert(31);
+    tree.insert(54);
+    expect(tree.balanced()).to.eql(-1);
+  });
 
     it('should return the size of the BST', function() {
     tree = new BinarySearchTree();
